@@ -1,14 +1,21 @@
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body { background-color: #2a2727;
 	color: white;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif; }
 hr { color: #ffffff;  }
-.ubody { background-color: #2d2929;
+.wraphead { width: 100%; 
+			height: 100%;}
+.ubody { background-color: white;
 		width: 100%;
 		margin: 0;}
+img { width: 80%;
+		height: auto;
+		margin-left: 10%;
+		}
 #navig { position : fixed;
 	height: 120px;
 	width: 100%; }
@@ -17,7 +24,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2a2727;	
+    background-color: #2a65ed;	
 }
 li {
     float: right;
@@ -34,14 +41,17 @@ li a:hover {
 	font-size: 120%;
 }
 ul { width: 100%; }
-.lbody {margin: 0; }
+
+.lbody {margin: 0; 
+		width:100%;
+		height: auto; }
 .col1{ width: 15%;
 		height: 100%;
 		float: left;
 		background-color: #2a2727;
 		text-align: center;
 		}
-.col2{ width: 60%;
+.col2{ width: 60%; height: auto;
 		background-color: #302f2f;
 		float: left;
 		text-align: center;
@@ -51,37 +61,64 @@ ul { width: 100%; }
 		float: right;
 		text-align: center;
 		}
+footer { 
+		clear: both;
+		background-color: #3a3f3f; }
+header { background-color: #e25604;
+		margin: 0;
+		width: 100%; height: 30px; 
+		font-size: 1.4em;}
+canvas
+	{
+	margin-top:1px;
+	background-color:#2a2727;
+	}
 </style>
 </head>
-<body class="wraphead">
+<body>
+
 <div id="navig">
 <ul>
-<li><a href=" ">Settings</a></li>
-<li><a href="">Help</a></li>
-<li><a href="">Profile</a></li>
+<li><a href=" "><i class="fa fa-gear" style="color: white;"></i></a></li>
+<li><a href=""><i class="fa fa-question-circle-o" style="color: white;"></i></a></li>
+<li><a href=""><i class="fa fa-id-badge" style="color: white;"></i>&nbsp;Profile</a></li>
 </ul>
-</div><div class="ubody">
-<br>
-<br><br><br>
-<br><p>Logo here</p>
-<hr>
 </div>
-<div class="lbody">
-<div class="col1"><h2>links here</h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
-<div class="col2">
-<ul>
-<li><a href=" ">Section</a></li>
-<li><a href="">Branch</a></li>
-<li><a href="">Year</a></li>
-<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</li>
-<li></li>
-<li><h5><em>SORT BY:</em></h5></li>
-</ul>
-<h2>body here</h2><br><p>every post comes in<br>a seperate division element<br>in white background<br>from backend<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+
+<div class="ubody">
+<img src="logodit.jpg"></img>
+</div>
+
+<article class="lbody">
+
+<div class="col1">
+<header><strong>LINKS</strong></header>
+<canvas>
+<script type="text/javascript" src="demo7.js"></script>
+</canvas>
+<br><br><br><br><br><br><br><br>
+</div>
+
 <div class="col3"><h2>events here</h2><br><p>events blocks<br>float here in time<br>sequence set in<br>
 javascript <br><br><br><br><br><br><br><br><br><br><br><br><br></div>
 </div>
 
+<div class="col2">
+<ul>
+<li>
+   
+</li>
+<li><a href=" ">Section</a></li>
+<li><a href="">Branch</a></li>
+<li><a href="">Year</a></li>
+
+</ul>
+<h2>body here</h2><br><p>every post comes in<br>a seperate division element<br>in white background<br>from backend<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+</article>
+<footer>This is Footer</footer>
 </body>
 </html>
