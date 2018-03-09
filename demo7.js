@@ -6,66 +6,21 @@ var mouse={
 	x:undefined,
 	y:undefined
 };
-window.addEventListener('mousemove',function(event)
-{
-	mouse.x=event.x;
-	mouse.y=event.y;
-})
+c.fillStyle="white";
 c.strokeStyle="white";
-c.fillStyle="white"
+var x=0;
 function Links()
 {
-this.Check=function()
-{
-	if(mouse.x>=32 && mouse.x<=99 && mouse.y>=74 && mouse.y<=115)
-	{
-		c.strokeStyle="#033d9b";
-		c.font="15px serif";
-		c.fillText("HOME",45,130);
-	}
-	else if(mouse.x>=45 && mouse.x<=85 && mouse.y>=157 && mouse.y<=199)
-	{
-		c.strokeStyle="#15af07";
-		c.font="15px serif";
-		c.fillText("BAG",45,220);
-	}
-	else if(mouse.x>=45 && mouse.x<=88 && mouse.y>=237 && mouse.y<=267)
-	{
-		c.strokeStyle="#ba0707";
-		c.font="15px serif";
-		c.fillText("MESSAGE",45,290);
-	}
-	else if(mouse.x>=45 && mouse.x<=88 && mouse.y>=307 && mouse.y<=337)
-	{
-		c.strokeStyle="#9e8300";
-		c.font="15px serif";
-		c.fillText("GALLERY",45,360);
-	}
-	else if(mouse.x>=45 && mouse.x<=88 && mouse.y>=377 && mouse.y<=415)
-	{
-		c.strokeStyle="#008c77";
-		c.font="15px serif";
-		c.fillText("NOTES",45,450);
-	}
-	else if(mouse.x>=45 && mouse.x<=95 && mouse.y>=462 && mouse.y<=499)
-	{
-		c.strokeStyle="#4c0589";
-		c.font="15px serif";
-		c.fillText("VIDEOS",45,520);
-	}
-	else if(mouse.x>=45 && mouse.x<=85 && mouse.y>=535 && mouse.y<=570)
-	{
-		c.strokeStyle="#89044d";
-		c.font="15px serif";
-		c.fillText("ARTICLE",45,600);
-	}
-	else
-		;
-	
-	
-}
 this.Home=function()
  {
+	 if(mouse.x>=43 && mouse.x<=97 && mouse.y>=71 && mouse.y<=121)
+	 {
+		 c.strokeStyle="red";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 var x=10;
 	 c.beginPath();
 	 c.moveTo(36+x,77+x);
@@ -83,21 +38,38 @@ this.Home=function()
 	 c.stroke();
 	 c.closePath();
 	 c.font="15px serif";
-	c.fillText("HOME",45,130);
+	 c.fillText("HOME",45,130);
 	 
  }
  this.Bag=function()
  {
+	 if(mouse.x>=37 && mouse.x<=101 && mouse.y>=154 && mouse.y<=206)
+	 {
+		 c.strokeStyle="#2dd8f7";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 c.strokeRect(45,167,40,30);
 	 c. beginPath();
 	 c.arc(65,167,10,Math.PI,0,false);
 	 c.stroke();
 	 c.closePath();
+	 c.is
 	 c.font="15px serif";
 	c.fillText("BAG",45,220);
  }
  this.Message=function()
  {
+	 if(mouse.x>=37 && mouse.x<=101 && mouse.y>=227 && mouse.y<=276)
+	 {
+		 c.strokeStyle="#f22b67";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 c.strokeRect(45,237,40,30);
 	 c.beginPath();
 	 c.moveTo(45,237);
@@ -110,6 +82,14 @@ this.Home=function()
  }
  this.Gallery=function()
  {
+	 if(mouse.x>=37 && mouse.x<=101 && mouse.y>=291 && mouse.y<=350)
+	 {
+		 c.strokeStyle="#b2f12a";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 c.strokeRect(45,307,40,30);
 	 c.beginPath();
 	 c.arc(75,315,4,0,2*Math.PI,false);
@@ -128,6 +108,14 @@ this.Home=function()
  }
  this.Notes=function()
  {
+	 if(mouse.x>=37 && mouse.x<=101 && mouse.y>=363 && mouse.y<=440)
+	 {
+		 c.strokeStyle="#0eb26b";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 c.strokeRect(45,377,40,50);
 	 c.beginPath();
 	 c.moveTo(55,377)
@@ -145,6 +133,14 @@ this.Home=function()
  }
  this.Videos=function()
  {
+	 if(mouse.x>=37 && mouse.x<=101 && mouse.y>=456 && mouse.y<=508)
+	 {
+		 c.strokeStyle="#e0ed2d";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 c.beginPath();
 	 c.moveTo(45,467);
 	 c.lineTo(75,467);
@@ -166,6 +162,14 @@ this.Home=function()
  }
  this.Article=function()
  {
+	 if(mouse.x>=37 && mouse.x<=101 && mouse.y>=524 && mouse.y<=580)
+	 {
+		 c.strokeStyle="#d6220a";
+	 }
+	 else
+	 {
+		c.strokeStyle="white";
+	 }
 	 c.beginPath();
 	 c.moveTo(45,537);
 	 c.lineTo(85,537);
@@ -195,18 +199,17 @@ l.Videos();
 l.Article();
 l.Bag();
 l.Message();
-l.Check();
-/*function animate()
+canvas.addEventListener('mousemove',function(event)
 {
-	requestAnimationFrame(animate);
-	c.clearRect(0,0,innerWidth,innerHeight);
+	var rect=canvas.getBoundingClientRect();
+	mouse.x=(event.clientX-rect.left);
+	mouse.y=(event.clientY-rect.top);
 	l.Home();
+	l.Bag();
 	l.Gallery();
 	l.Notes();
 	l.Videos();
 	l.Article();
-	l.Bag();
 	l.Message();
-	l.Check();
-}
-animate();*/
+	console.log((mouse.x)+","+(mouse.y));
+})
