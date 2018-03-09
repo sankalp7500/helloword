@@ -45,7 +45,8 @@ li a:hover {
 	font-size: 120%;
 }
 #ditinfo { background-color: #3a3f3f; 
-			height: 130px;
+			width=400px;
+			height=400px;
 		}
 .lbody {margin: 0; 
 		width:100%;
@@ -73,10 +74,14 @@ header { background-color: #2a65ed;
 		margin: 0;
 		width: 100%; height: 30px; 
 		font-size: 1.4em;}
+.clsimg{
+max-width:100%;
+height:auto;
+}
 .toplink
 {
 width: 100%;
-margin: 0;
+margin: 0px;
 height: 130px;
 background-color:white;
 }
@@ -114,7 +119,7 @@ if(showhide == "show"){
 
 </head>
 <body>
-
+<div>
 <div class="ubody">
 <img src="ditlo.jpg"></img>
 </div>
@@ -140,19 +145,34 @@ if(showhide == "show"){
 </div>
 
 <div id="ditinfo">
-<canvas id="layer1" class="toplink">
-<script  type="text/javascript" src="tmp.js"></script>
-</canvas>
-<canvas id="layer2">
-<script  type="text/javascript" src="tmp.js"></script>
-</canvas>
+<img src="events.jpg" class="clsimg" />
+<img src="help.jpg" class="clsimg" />
+<img src="books.jpg" class="clsimg" />
 </div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("clsimg");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+</script>
 
 <article class="lbody">
 
 <div class="col1">
 <header><strong>LINKS</strong></header>
-
+<canvas id="layer2">
+<script  type="text/javascript" src="demo7.js"></script>
+</canvas>
 </div>
 
 <div class="col2">
